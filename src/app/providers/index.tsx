@@ -42,13 +42,8 @@ export const Providers = ({ children }: ProvidersProps) => {
   const options: SDKInitOptions = {
     acceptCustomStyles: true,
     cssVars: true,
+    async: true,
   };
-
-  const miniApp = useMiniApp();
-
-  useEffect(() => {
-    miniApp.ready();
-  }, []);
 
   return (
     <SDKProvider options={options}>
